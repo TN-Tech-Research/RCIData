@@ -84,11 +84,11 @@
   .judging-comments-row{position:relative;display:flex;justify-content:center;margin:8px auto 0;width:min(280px,100%)}
   .judging-comments-row .stat{width:100%;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:visible;padding-right:0}
   .judging-comments-row .stat .lbl{position:relative;display:flex;align-items:center;margin-bottom:0;overflow:visible;padding-right:90px;min-height:28px}
-  .judging-comments-row .stat .lbl::after{content:"";position:absolute;top:80%;right:10px;width:172px;height:62px;transform:translateY(-50%);background:url("inverted_bubbles.png") right center/contain no-repeat;opacity:.92;pointer-events:none;z-index:3}
+  .judging-comments-row .stat .lbl::after{content:"";position:absolute;top:80%;right:10px;width:172px;height:62px;transform:translateY(-50%);background:url("assets/inverted_bubbles.png") right center/contain no-repeat;opacity:.92;pointer-events:none;z-index:3}
 
   /* ── Callout ── */
   .callout{margin-top:16px;padding:12px 14px;background:var(--purple-light);border-radius:8px;border-left:3px solid var(--gold);font-size:13px;color:var(--purple);line-height:1.7;display:flex;align-items:center;gap:12px}
-  .callout::before{content:"";width:54px;height:54px;flex-shrink:0;background:url("bulb_square.png") center/contain no-repeat}
+  .callout::before{content:"";width:54px;height:54px;flex-shrink:0;background:url("assets/bulb_square.png") center/contain no-repeat}
 
   /* ── Rating cards ── */
   .rating-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(185px,1fr));gap:16px;margin-bottom:16px}
@@ -265,7 +265,7 @@
   .quote-bubble{
     flex:1;min-width:0;position:relative;
     /* image is the bubble shape; stretch to fill so tail scales with content */
-    background:url("inverted_bubbles.png") center/100% 100% no-repeat;
+    background:url("assets/inverted_bubbles.png") center/100% 100% no-repeat;
     /* top/side padding keeps text in the bubble body; bottom padding reserves space for the tail */
     padding:49px 32px 10px 14px;
     font-size:10px;color:#FFFFFF;line-height:1.5;
@@ -299,7 +299,7 @@
 
   <div class="header">
     <div class="header-brand">
-      <img src="altRCISlogo.png" alt="Research and Creative Inquiry Symposium 2026 logo"/>
+      <img src="assets/altRCISlogo.png" alt="Research and Creative Inquiry Symposium 2026 logo"/>
     </div>
     <div class="header-meta">Post-mortem satisfaction survey</div>
   </div>
@@ -646,11 +646,11 @@
   <!-- ══ NAV ══ -->
   <div class="nav">
     <button id="btnPrev" class="nav-arrow" onclick="go(-1)" aria-label="Previous slide" disabled>
-      <img src="left.png" class="nav-icon-img" alt="" aria-hidden="true"/>
+      <img src="assets/left.png" class="nav-icon-img" alt="" aria-hidden="true"/>
     </button>
     <div class="pills" id="pills"></div>
     <button id="btnNext" class="nav-arrow" onclick="go(1)" aria-label="Next slide">
-      <img src="right.png" class="nav-icon-img" alt="" aria-hidden="true"/>
+      <img src="assets/right.png" class="nav-icon-img" alt="" aria-hidden="true"/>
     </button>
   </div>
 
