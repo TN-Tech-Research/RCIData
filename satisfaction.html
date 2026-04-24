@@ -10,12 +10,12 @@
     --purple:#765495;--purple-mid:#6b3c8d;--purple-light:#EEEDFE;
     --gold:#F0C040;--gold-light:#FDF4D0;
     --green:#F0C040;--red:#ffdbdb;--gray:#6B6B6B;
-    --border:#b578c8;--bg:hsl(267, 100%, 96%);
+    --border:#9179ad;--bg:hsl(267, 100%, 96%);
     --deck-scale:1;
     --deck-base-height:0px;
     --slide-base-height:420px;
   }
-  body{font-family:Helvetica,sans-serif,-apple-system,sans-serif;background:#e9cfff6a;color:#1a1a2e;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px 16px;overflow:auto}
+  body{font-family:Helvetica,sans-serif,-apple-system,sans-serif;background:#2b0a476a;color:#1a1a2e;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px 16px;overflow:auto}
   h1,h2,h3{font-weight:500}
 
   /* ── Deck wrapper ── */
@@ -261,11 +261,19 @@
   }
 
   /* ── Quote bubbles ── */
-  .quote-bubbles{display:flex;gap:10px;margin-bottom:14px}
-  .quote-bubble{flex:1;min-width:0;background:var(--red);border:0.5px solid var(--border);border-radius:10px;padding:10px 12px;font-size:11px;color:#1a1a2e;line-height:1.5;position:relative}
-  .quote-bubble::after{content:"";position:absolute;bottom:-7px;left:18px;width:0;height:0;border-left:7px solid transparent;border-top:7px solid var(--border)}
-  .quote-bubble::before{content:"";position:absolute;bottom:-6px;left:19px;width:0;height:0;border-left:6px solid transparent;border-top:6px solid var(--purple-light);z-index:1}
-  .quote-bubble .attrib{display:block;margin-top:6px;font-weight:500;color:var(--purple);font-size:10px}
+  .quote-bubbles{display:flex;gap:10px;margin-top:18px;align-items:flex-start}
+  .quote-bubble{
+    flex:1;min-width:0;position:relative;
+    /* image is the bubble shape; stretch to fill so tail scales with content */
+    background:url("inverted_bubbles.png") center/100% 100% no-repeat;
+    /* top/side padding keeps text in the bubble body; bottom padding reserves space for the tail */
+    padding:49px 32px 10px 14px;
+    font-size:10px;color:#FFFFFF;line-height:1.5;
+    overflow:visible;
+  }
+  .quote-bubble::after{display:none}
+  .quote-bubble::before{display:none}
+  .quote-bubble .attrib{display:block;margin-top:6px;font-weight:700;color:var(--gold);font-size:10px}
 
   /* ── Print ── */
   @media print{
@@ -395,8 +403,12 @@
         <span class="attrib">&mdash; Emma</span>
       </div>
       <div class="quote-bubble anim-card">
-        &ldquo;It was unclear that we would need to provide a poster board to set up our posters on until it was mentioned in an email that those on hand had run out. I would have appreciated more advance notice so I could have been better prepared.&rdquo;
+        &ldquo;It was unclear that we would need to provide a poster board...until it was mentioned in an email. I would have appreciated more advance notice.&rdquo;
         <span class="attrib">&mdash; Livia</span>
+      </div>
+      <div class="quote-bubble anim-card">
+        &ldquo;Please make the research day website better. The dates, expectations, and materials need to be clearly explained. Not just vaguely and difficult to find.&rdquo;
+        <span class="attrib">&mdash; Yaran</span>
       </div>
     </div>
     </div>
